@@ -1,0 +1,38 @@
+<!--<p>card works!</p>
+<table>
+    <tr><td>Card Number: </td> <td><input type="number" required> </td></tr>
+    <tr><td>CVV: </td> <td><input type="number" > </td></tr>
+    <tr><td>Date:</td> <td><input type="date" > </td></tr>
+    <tr><td>Name:</td> <td><input type="text" > </td></tr>
+    <tr><td><button class="btn btn-outline-danger my-2 my-sm-0" (click)=saveData(1)>SUBMIT</button>  </td> <td></td>  </tr>
+    </table>
+    <p>depend1 works!</p>-->
+
+    <form #cardform="ngForm"  (ngSubmit)="saveData(cardform)">
+        <table>
+            <tr>
+                <td><label for ="prodid">Card Number:</label></td>
+                <td><input type="number" name ="prodid" ngModel required></td>
+            </tr>
+                <tr>
+                    <td><label for ="prodname">CVV: </label></td>
+                    <td><input type="number" name="prodname" ngModel required></td>                
+                </tr>
+                <tr>
+                    <td><label for ="price">Date:</label></td>
+                    <td><input type="date"  name="price" ngModel required ></td>
+                </tr>
+                <td><label for="suplierMail">Name:</label></td>
+                <td><input type ="text" name ="suplierMail" ngModel required ></td>
+                
+                <tr>
+                    <td></td>
+                    <td><button [disabled]="cardform.invalid">Submit</button></td>
+                </tr>
+                
+            
+        </table>
+    </form>
+    <br>
+    <br>
+    
